@@ -12,7 +12,7 @@ export default function App() {
 
   const fetchUsers = () => {
     setLoading(true);
-    fetch('http://localhost:500/users')
+    fetch('http://54.90.81.21:500/users')
       .then(res => res.json())
       .then(result => {
         setUsers(result);
@@ -26,7 +26,7 @@ export default function App() {
   };
 
   const deleteUser = (Username) => {
-    fetch('http://localhost:500/deleteUser', { // Make sure to use the correct port (500)
+    fetch('http://54.90.81.21:500/deleteUser', { // Make sure to use the correct port (500)
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export default function App() {
   };
 
   const addUser = () => {
-    fetch('http://localhost:500/addUser', {
+    fetch('http://54.90.81.21:500/addUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
